@@ -1,0 +1,16 @@
+export const TRANSLATIONS_EN = {
+  home: "Home Page",
+  name: "Name",
+  email: "Email",
+  phone: "Phone",
+  password: "Password",
+  country: "Country",
+  description: "Description",
+  submit: "Submit",
+  cancel: "Cancel",
+  login: "Login",
+  username: "Username",
+  close: "Close",
+  contactUs: "Contact Us",
+  logout: "Logout",
+};
