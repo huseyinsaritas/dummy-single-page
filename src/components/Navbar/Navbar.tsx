@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import { useHistory, useLocation } from "react-router-dom";
 import { Icon } from "rsuite";
 import { ROUTE_PATH } from "../../enum/ROUTE_PATH";
-import { ROUTE_PATH_TITLE } from "../../enum/ROUTE_PATH_TITLE";
 import { Burger } from "./Burger/Burger";
 import { StyledNavbar } from "./StyledNavbar";
 

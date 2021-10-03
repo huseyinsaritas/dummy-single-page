@@ -20,5 +20,6 @@ export const StyledNavbar = styled.div`
   .breadcrumb {
     font-size: 0.75rem;
     padding: 1.25rem 0;
+    min-width: 5rem;
   }
 `;

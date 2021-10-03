@@ -10,17 +10,26 @@ export const StyledRightNav = styled.ul<IStyledRightNav>`
   flex-direction: row;
   padding: 0;
 
+  .active {
+    background: #292d33;
+    color: #fff;
+  }
+
   li {
     padding: 1.25rem 1rem;
     font-size: 0.875rem;
     font-weight: 500;
     height: 3.5rem;
+    cursor: pointer;
 
     &:hover {
       background: #292d33;
 
       a {
         color: #fff !important;
+        text-decoration: none !important;
+        outline: none;
+        height: 3.5rem;
       }
     }
   }
