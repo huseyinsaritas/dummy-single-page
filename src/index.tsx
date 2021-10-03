@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import createAppStore from "./redux/store";
 import "rsuite/dist/styles/rsuite-dark.css";
 import "./i18n";
+import "./index.css";
 
 const store = createAppStore();
 ReactDOM.render(

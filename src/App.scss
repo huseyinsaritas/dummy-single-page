@@ -1,0 +1,52 @@
+.App {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.btn-submit {
+  color: #fff;
+  background-color: #169de0;
+  transition: color 0.2s linear, background-color 0.3s linear;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: 0 !important;
+  white-space: nowrap;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: #59d0ff;
+  }
+}
+
+.btn-cancel {
+  color: #fff;
+  background: #3c3f43;
+  transition: color 0.2s linear, background-color 0.3s linear;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: 0 !important;
+  white-space: nowrap;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 6px;
+  margin-left: 0.5rem;
+
+  &:hover {
+    color: #e9ebf0;
+    background-color: #6a6f76;
+  }
+}
