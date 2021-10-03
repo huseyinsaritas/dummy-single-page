@@ -1,83 +1,36 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
-import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
-import { Icon, Nav, Navbar } from "rsuite";
+import { useHistory, useLocation } from "react-router-dom";
+import { Icon } from "rsuite";
 import { ROUTE_PATH } from "../../enum/ROUTE_PATH";
-import i18n from "../../i18n";
-import { setLanguage, setUser } from "../../redux/action/user";
-import { UserState } from "../../redux/model/user";
-import { Localization } from "../Localization/Localization";
-import { LoginModal } from "../LoginModal/LoginModal";
-import { LogOut } from "../LogOut/LogOut";
+import { ROUTE_PATH_TITLE } from "../../enum/ROUTE_PATH_TITLE";
+import { Burger } from "./Burger/Burger";
+import { StyledNavbar } from "./StyledNavbar";
 
-export const MainNavbar = () => {
-  const [showModal, setShowModal] = useState(false);
-  const [selectedTab, setSelectedTab] = useState<ROUTE_PATH>(ROUTE_PATH.HOME);
-
-  const { t } = useTranslation();
+export const Navbar = () => {
   const history = useHistory();
-  const user = useSelector((state: UserState) => state.user);
-  const dispatch = useDispatch();
+  const location = useLocation();
+  const { t } = useTranslation();
 
-  const languageStore = localStorage.getItem("i18nextLng");
-
-  useEffect(() => {
-    const userStore = localStorage.getItem("user");
-    const userInfo = userStore && JSON.parse(userStore);
-
-    if (userInfo) dispatch(setUser({ name: userInfo.username, email: userInfo.email }));
-
-    if (languageStore !== null) {
-      dispatch(setLanguage(languageStore));
-      i18n.changeLanguage(languageStore);
+  const findBreadCrumb = () => {
+    const appLocation = location.pathname;
+    if (appLocation === ROUTE_PATH.HOME) {
+      return <span>/{t("home")}</span>;
     }
-  }, [dispatch, languageStore]);
+    if (appLocation === ROUTE_PATH.CONTACT) {
+      return <span>/{t("contactUs")}</span>;
+    }
+  };
 
   return (
-    <>
-      <LoginModal show={showModal} close={() => setShowModal(false)} />
-      <Navbar>
-        <Nav
-          onSelect={(eventKey: any) => {
-            setSelectedTab(eventKey);
-          }}
-          activeKey={selectedTab}
-        >
-          <Nav.Item
-            eventKey={ROUTE_PATH.HOME}
-            icon={<Icon icon="home" />}
-            onClick={() => {
-              history.push(ROUTE_PATH.HOME);
-            }}
-          >
-            {t("home")}
-          </Nav.Item>
-        </Nav>
-        <Nav pullRight>
-          <Nav.Item
-            eventKey={ROUTE_PATH.CONTACT}
-            icon={<Icon icon="envelope" />}
-            onClick={() => {
-              history.push(ROUTE_PATH.CONTACT);
-            }}
-          >
-            {t("contactUs")}
-          </Nav.Item>
-
-          <Localization currentLanguage={languageStore || ""} />
-          {user ? (
-            <LogOut />
-          ) : (
-            <Nav.Item eventKey="3" icon={<Icon icon="sign-in" />} onSelect={() => setShowModal(true)}>
-              {/* <Button onClick={() => setShowModal(true)} appearance="primary">
-          {t("login")}
-        </Button> */}
-              {t("login")}
-            </Nav.Item>
-          )}
-        </Nav>
-      </Navbar>
-    </>
+    <StyledNavbar>
+      <div className="navbar-left-side">
+        <div className="logo" onClick={() => history.push(ROUTE_PATH.HOME)}>
+          <Icon icon="tripadvisor" size="lg" />
+        </div>
+        <div className="breadcrumb">{findBreadCrumb()}</div>
+      </div>
+      <Burger />
+    </StyledNavbar>
   );
 };
