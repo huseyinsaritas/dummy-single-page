@@ -1,16 +1,10 @@
 import { Reducer } from "redux";
-import { LOGIN, LOGOUT, SET_LANGUAGE, SET_USER } from "../actionType/user";
+import { LOGOUT, SET_LANGUAGE, SET_USER } from "../actionType/user";
 import { Action } from "../model/Action";
 import { initialUserState, UserState } from "../model/user";
 
 const userReducer: Reducer<UserState, Action> = (state: UserState = initialUserState, action: Action): UserState => {
   switch (action.type) {
-    case LOGIN:
-      return {
-        ...state,
-        user: action.payload,
-      };
-
     case LOGOUT:
       return initialUserState;
 
