@@ -13,4 +13,5 @@ export const TRANSLATIONS_TR = {
   close: "Kapat",
   contactUs: "İletişim",
   logout: "Çıkış",
+  allrightsReserved: "Tüm hakları saklıdır.",
 };

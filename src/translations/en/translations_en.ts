@@ -13,4 +13,5 @@ export const TRANSLATIONS_EN = {
   close: "Close",
   contactUs: "Contact Us",
   logout: "Logout",
+  allrightsReserved: "All rights reserved.",
 };
