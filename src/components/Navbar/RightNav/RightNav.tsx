@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
@@ -74,7 +75,7 @@ export const RightNav: React.FC<Props> = ({ open }) => {
           }}
           className={`${selectedTab === ROUTE_PATH.CONTACT && "active"}`}
         >
-          <a href="javascript:void(0)" rel="noopener noreferrer" role="button">
+          <a rel="noopener noreferrer" role="button">
             {t("contactUs")}
           </a>
         </li>
@@ -85,7 +86,7 @@ export const RightNav: React.FC<Props> = ({ open }) => {
           <LogOut />
         ) : (
           <li onClick={() => setShowModal(true)}>
-            <a href="javascript:void(0)" rel="noopener noreferrer" role="button">
+            <a rel="noopener noreferrer" role="button">
               {t("login")}
             </a>
           </li>

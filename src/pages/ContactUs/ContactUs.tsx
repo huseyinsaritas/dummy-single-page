@@ -1,4 +1,3 @@
-import { spawn } from "child_process";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { SelectBox } from "../../components/SelectBox/SelectBox";
@@ -49,7 +48,6 @@ export const ContactUs = () => {
   const handleSubmit = (event: React.FormEvent<HTMLButtonElement>) => {
     if (isValid()) {
       setWarningMessage("");
-      console.log(user);
     } else {
       event.preventDefault();
       event.stopPropagation();

@@ -7,5 +7,5 @@ export const passwordFormatValid = (password: string): RegExpMatchArray | null =
 };
 
 export const phoneNumberFormatValid = (phone: string): RegExpMatchArray | null => {
-  return phone.match(/^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/);
+  return phone.match(/^(\+\d{1,2}\s?)?1?-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/);
 };

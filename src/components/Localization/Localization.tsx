@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
@@ -16,8 +17,6 @@ export const Localization: React.FC<Props> = ({ currentLanguage }) => {
   const { i18n } = useTranslation();
 
   const onSelect = (value: string) => {
-    console.log(value);
-
     localStorage.setItem("i18nextLng", value);
     dispatch(setLanguage(value));
     i18n.changeLanguage(value);

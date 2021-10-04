@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Icon } from "rsuite";
@@ -32,7 +33,7 @@ export const SelectBox: React.FC<Props> = ({ options, onSelect }) => {
     <div className="selectbox-container">
       <div className="selectbox-header" onClick={toggleDropdown}>
         {selectedItem ? (
-          <a href="javascript:void(0)" rel="noopener noreferrer" className="selected-item">
+          <a rel="noopener noreferrer" className="selected-item">
             {selectedOption}
           </a>
         ) : (
@@ -55,7 +56,7 @@ export const SelectBox: React.FC<Props> = ({ options, onSelect }) => {
       <div className={`selectbox-body ${open && "open"}`}>
         {options.map((option, index) => (
           <div key={index} className="selectbox-item" onClick={() => handleItemClick(option)} id={option.id}>
-            <a href="javascript:void(0)" rel="noopener noreferrer" className="selectbox-select-item">
+            <a rel="noopener noreferrer" className="selectbox-select-item">
               {option.name}
             </a>
           </div>
