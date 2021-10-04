@@ -5,7 +5,7 @@ import { countryList } from "../../constants/countries";
 import { ROUTE_PATH_TITLE } from "../../enum/ROUTE_PATH_TITLE";
 import { WARNING_MESSAGE } from "../../enum/WARNING_MESSAGE";
 import { emailFormatValid, passwordFormatValid, phoneNumberFormatValid } from "../../helper";
-import "./ContactUs.css";
+import "./ContactUs.scss";
 
 export const ContactUs = () => {
   const [user, setUser] = useState({ name: "", email: "", phone: "", password: "", country: "", description: "" });

@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import createAppStore from "./redux/store";
 import "rsuite/dist/styles/rsuite-dark.css";
 import "./i18n";
-import "./index.css";
+import "./index.scss";
 
 const store = createAppStore();
 ReactDOM.render(
