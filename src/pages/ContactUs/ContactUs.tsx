@@ -3,16 +3,9 @@ import { useTranslation } from "react-i18next";
 import { SelectBox } from "../../components/SelectBox/SelectBox";
 import { countryList } from "../../constants/countries";
 import { ROUTE_PATH_TITLE } from "../../enum/ROUTE_PATH_TITLE";
+import { WARNING_MESSAGE } from "../../enum/WARNING_MESSAGE";
 import { emailFormatValid, passwordFormatValid, phoneNumberFormatValid } from "../../helper";
 import "./ContactUs.css";
-
-enum WARNING_MESSAGE {
-  NAME_EMPTY = "Name cant be empty!",
-  EMAIL_EMPTY = "Email cant be empty!",
-  EMAIL_VALID = "Email format is not valid!",
-  PHONE_VALID = "Phone number format is not valid!",
-  PASSWORD_VALID = "Password needs to be at least 8 character long and must include an lowercase and uppercase letter and a number!",
-}
 
 export const ContactUs = () => {
   const [user, setUser] = useState({ name: "", email: "", phone: "", password: "", country: "", description: "" });
