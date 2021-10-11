@@ -40,7 +40,7 @@ export const StyledRightNav = styled.ul<IStyledRightNav>`
 
   @media (max-width: 768px) {
     flex-direction: column;
-    background-color: #0d2538;
+    background-color: #1a1d24;
     position: fixed;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: 0;
