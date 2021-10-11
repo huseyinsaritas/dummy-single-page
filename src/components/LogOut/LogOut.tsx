@@ -18,12 +18,12 @@ export const LogOut = () => {
   };
 
   return (
-    <div className="dropdown">
-      <button className="dropbtn">
+    <div className="logout-dropdown">
+      <button className="logout-dropbtn">
         {user?.name}
         <Icon icon="down" />
       </button>
-      <div className="dropdown-content">
+      <div className="logout-dropdown-content">
         <a href="#" onClick={logOut}>
           {t("logout")}
         </a>

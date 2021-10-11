@@ -1,4 +1,4 @@
-.dropbtn {
+.logout-dropbtn {
   background-color: transparent;
   color: white;
   padding: 1.25rem 0.5rem;
@@ -7,17 +7,17 @@
   cursor: pointer;
 }
 
-.dropbtn:hover,
-.dropbtn:focus {
+.logout-dropbtn:hover,
+.logout-dropbtn:focus {
   background-color: #2980b9;
 }
 
-.dropdown {
+.logout-dropdown {
   position: relative;
   display: inline-block;
 }
 
-.dropdown-content {
+.logout-dropdown-content {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
@@ -27,14 +27,14 @@
   z-index: 1;
 }
 
-.dropdown-content a {
+.logout-dropdown-content a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-.dropdown a:hover {
+.logout-dropdown a:hover {
   background-color: #ddd;
 }
 
